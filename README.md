@@ -32,6 +32,7 @@
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Sunstoic's charting tool 2025 | Finished    |   indicators, TPO profile, Volume profile  |   Pinescript  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|  The 8-9pm Rangebreakout Stoporder Method. | Finished    |   indicators, an Opening Range Break (ORB) reference.  |   Pinescript  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Asia/manila Time Logic  | Finished    |  code layout |   Pinescript  |
+| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    1min 4CCP + 3min 6CBP Pattern Detector + 30minute bars (Asia/Manila) | Finished    |  indicator, plot boxes |   Pinescript  |
 
 ## Python Folder
 
