@@ -1,0 +1,4 @@
+QAT-QuantitativeAlgorithmicTrading
+    Pinescript folder
+    Python folder
+    MQL5 folder
