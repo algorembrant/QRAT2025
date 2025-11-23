@@ -1,0 +1,5 @@
+entry 50 pips
+TP 1000 pips
+risk 3%
+run all day
+

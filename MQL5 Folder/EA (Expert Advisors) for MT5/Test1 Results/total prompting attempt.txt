@@ -1,0 +1,18 @@
+total prompting attempt: 78
+
+success: 1 (not this) at attempt 1
+success: 1 (not this) at attempt 46
+success: 1 (not this) at attempt 55
+success: 1 (not this) at attempt 58
+success: 1 (not this) at attempt 59
+success: 1 (not this) at attempt 60
+success: 1 (not this) at attempt 61
+success: 1 (not this) at attempt 67
+success: 1 (not this) at attempt 68
+success: 1 (not this) at attempt 69
+success: 1 (not this) at attempt 70
+success: 1 (not this) at attempt 73
+success: 1 (not this) at attempt 77
+success: 1 (this?) at attempt 78
+
+ satus: gathering data for the latest model

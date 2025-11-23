@@ -1,0 +1,5 @@
+test 1
+risk: 10%
+starting capital: 1000
+end capital: 4429.13 342.91% gain
+duration: 1h

@@ -1,0 +1,2 @@
+entry = 50 pips
+tp = 100 pips

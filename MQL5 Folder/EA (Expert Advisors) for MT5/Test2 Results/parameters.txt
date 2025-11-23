@@ -1,0 +1,3 @@
+changed
+
+entry distance = 50 pips

@@ -1,0 +1,3 @@
+risk 5% but the run got cut off due to HMR period, decreadesd to 3%
+    entry 50
+    tp  1000

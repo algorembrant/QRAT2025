@@ -1,0 +1,13 @@
+modified parameters
+
+entry = 50 pips
+tp = 1000 pips
+
+Start time: 08:13:12
+End time: 09:55:38
+
+Hours: 09 − 08 = 1 hour
+Minutes: 55 − 13 = 42 minutes
+Seconds: 38 − 12 = 26 seconds
+
+duration is: 1 hour, 42 minutes, 26 seconds.
