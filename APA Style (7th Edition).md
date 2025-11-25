@@ -30,9 +30,9 @@ Centered, double-spaced, placed in the top half of the page.
 6. **Due Date**
 
 **Example:**
-
+(Title bold, all center)
 ```
-The Effect of Sleep on Memory Performance
+The Effect of Sleep on Memory Performance 
 Juan C. Dela Cruz
 University of the Philippines
 PSY 203: Cognitive Psychology
