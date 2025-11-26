@@ -62,3 +62,8 @@
 
 ---
 
+# Repository Stats
+
+<!-- STATS:START -->
+Loading statistics...
+<!-- STATS:END -->
