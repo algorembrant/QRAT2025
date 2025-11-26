@@ -67,3 +67,6 @@
 <!-- STATS:START -->
 Loading statistics...
 <!-- STATS:END -->
+
+# Repo Statistics
+{% include_relative reports/summary.md %}
