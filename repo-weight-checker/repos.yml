@@ -2,3 +2,5 @@ repos:
   - name: QAT-QuantitativeAlgorithmicTrading
     url: https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading.git
     local_path: ./repos/QAT-QuantitativeAlgorithmicTrading
+    skip_extensions: [".png", ".jpg", ".exe", ".so"]
+

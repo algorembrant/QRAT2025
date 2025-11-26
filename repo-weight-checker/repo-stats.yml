@@ -27,6 +27,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # for private repo cloning you'd need a PAT in secrets
         run: |
           python repo_stats.py
+          
+      - name: Update README with summary
+        run: python update_readme.py
 
       - name: Commit updated README + reports
         run: |
@@ -52,3 +55,6 @@ jobs:
 
           # Replace the section between markers
           sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\<!-- STATS:START -->\n${SUMMARY_CONTENT}\n<!-- STATS:END -->" README.md
+       
+      
+
