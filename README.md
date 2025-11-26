@@ -62,6 +62,12 @@
 
 ---
 
-## 📊 Repository Size Summary
+# My Repository
+
+Some intro text...
+
 <!-- REPO_STATS_START -->
 <!-- REPO_STATS_END -->
+
+More content...
+

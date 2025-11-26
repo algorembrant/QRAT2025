@@ -1,9 +1,9 @@
-name: Repo Weight Stats
+name: Repo Weight Stats 
 
 on:
   schedule:
     - cron: '0 6 * * *'     # Runs daily at 06:00 UTC
-  workflow_dispatch:        # Allows manual run in GitHub Actions
+  workflow_dispatch:        # Allows manual run
 
 jobs:
   stats:
@@ -23,23 +23,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install PyYAML
+          pip install -r requirements.txt
 
-      - name: Run stats script (repo_stats.py)
+      - name: Run repo_stats.py
         run: python repo_stats.py
 
       - name: Generate summary.md
         run: python make_summary.py
 
-      - name: Insert summary.md into README
-        run: |
-          SUMMARY_CONTENT=$(cat reports/summary.md)
-
-          SUMMARY_CONTENT="${SUMMARY_CONTENT//'%'/'%25'}"
-          SUMMARY_CONTENT="${SUMMARY_CONTENT//$'\n'/'%0A'}"
-          SUMMARY_CONTENT="${SUMMARY_CONTENT//$'\r'/'%0D'}"
-
-          sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\<!-- STATS:START -->\n${SUMMARY_CONTENT}\n<!-- STATS:END -->" README.md
+      - name: Update README from summary.md
+        run: python update_readme.py
 
       - name: Commit changes (README + reports)
         run: |

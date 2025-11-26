@@ -1,10 +1,10 @@
 # 📊 Repository Size Summary
 
-**Last Updated:** `2025-11-26T05:47:32.428191Z`
+**Last Updated:** `2025-11-26T06:26:10.260874Z`
 
 | Repository | Size | Files | Lines | Status |
 |-----------|-------|--------|--------|---------|
-| QAT-QuantitativeAlgorithmicTrading | 34.36 MB | 88 | 470,268 | ✅ OK |
+| QAT-QuantitativeAlgorithmicTrading | 30.97 MB | 59 | 455,684 | ✅ OK |
 
 ---
 ## 📁 Detailed Report
@@ -12,6 +12,6 @@
 ### QAT-QuantitativeAlgorithmicTrading
 - **URL:** https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading.git
 - **Local Path:** `repos/QAT-QuantitativeAlgorithmicTrading`
-- **Total Size:** 34.36 MB (36033220 bytes)
-- **Files:** 88
-- **Lines:** 470,268
+- **Total Size:** 30.97 MB (32469889 bytes)
+- **Files:** 59
+- **Lines:** 455,684
