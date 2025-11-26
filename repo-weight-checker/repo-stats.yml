@@ -2,14 +2,15 @@ name: Repo Weight Stats
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # runs daily at 06:00 UTC (adjust as needed)
-  workflow_dispatch:      # manual trigger in Actions UI
+    - cron: '0 6 * * *'     # Runs daily at 06:00 UTC
+  workflow_dispatch:        # Allows manual run in GitHub Actions
 
 jobs:
   stats:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo (includes the script)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -19,42 +20,31 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install deps
-        run: python -m pip install --upgrade pip && pip install PyYAML
-
-      - name: Run stats script
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # for private repo cloning you'd need a PAT in secrets
+      - name: Install dependencies
         run: |
-          python repo_stats.py
-          
-      - name: Update README with summary
-        run: python update_readme.py
+          python -m pip install --upgrade pip
+          pip install PyYAML
 
-      - name: Commit updated README + reports
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md reports || true
-          git commit -m "Update repo stats in README [ci skip]" || echo "No changes"
-          git push
+      - name: Run stats script (repo_stats.py)
+        run: python repo_stats.py
 
-        # Note: if your default branch isn't 'main' change 'main' accordingly
-
-      - name: Generate Markdown summary
+      - name: Generate summary.md
         run: python make_summary.py
 
       - name: Insert summary.md into README
         run: |
           SUMMARY_CONTENT=$(cat reports/summary.md)
 
-          # Escape special chars
           SUMMARY_CONTENT="${SUMMARY_CONTENT//'%'/'%25'}"
           SUMMARY_CONTENT="${SUMMARY_CONTENT//$'\n'/'%0A'}"
           SUMMARY_CONTENT="${SUMMARY_CONTENT//$'\r'/'%0D'}"
 
-          # Replace the section between markers
           sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\<!-- STATS:START -->\n${SUMMARY_CONTENT}\n<!-- STATS:END -->" README.md
-       
-      
 
+      - name: Commit changes (README + reports)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md reports
+          git commit -m "Update repo stats" || echo "No changes to commit"
+          git push
