@@ -43,6 +43,7 @@
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Market Profile (volumedata ver), not TPO-based | Finished    |   chart plotting and vertical profiles |   Python  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Chart plotting | Finished    |  code layout |   Python  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    89RS Backtested in Python | Finished    |  chart plotting, trade executions, backtesting, statistics |   Python  |
+| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy| Finished    |   Deployed Python algorithmic trading bot, stoporder hedging, `126million hours Backtesting`, `Research Paper documentation` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Images%20Folder/pasted-image%20(15).png?raw=true)|   Python  |
 
 
 ## MQL5 Folder
@@ -50,8 +51,6 @@
 |   View    |   Info    |   Status  |   Included Details    |   Language    |
 |-|-|-|-|-|
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Hedging Expert Advisor (EA) for MT5 | Finished    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, `4hour trial, six 1h, 12h finale (22hr+ duration tests)` `documented & research paper` `2 LiveTests 7hr &` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Images%20Folder/pasted-image%20(12).png)|   MQL5  |
-| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy
- | Finished    |   Deployed EA algorithmic trading bot, stoporder hedging, 126million hours Backtesting, Research Paper documentation` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Images%20Folder/pasted-image%20(12).png)|   MQL5  |
 
 ## Concepts and Topics Folder
 
@@ -73,5 +72,6 @@ Some intro text...
 <!-- REPO_STATS_END -->
 
 More content...
+
 
 
