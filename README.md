@@ -50,7 +50,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/Market%20Profile%20(volumedata%20ver).ipynb)**|    Market Profile (volumedata ver), not TPO-based | Finished    |   account identification |   Python  |
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/Using%20Python%20to%20plot%20charts%20from%20MT5's%20data%20feed.ipynb)**|    Chart plotting | Finished    |  code layout |   Python  |
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/89RS.ipynb)**|    89RS Backtested in Python | Finished    |  chart plotting, trade executions, backtesting, statistics |   Python  |
-| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/1HRMRSSv1/0.%20Design%20and%20Optimization%20of%201HRMRSSv1%20by%20Sunstoic.pdf)**|    Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy| Finished    |   Deployed Python algorithmic trading bot, stoporder hedging, `126million hours Backtesting`, `Research Paper documentation` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/pasted-image%20(15).png?raw=true)|   Python  |
+| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/1HRMRSSv1/0.%20Design%20and%20Optimization%20of%201HRMRSSv1%20by%20Sunstoic.pdf)**|    Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy| Finished    |   Deployed Python algorithmic trading bot, stoporder hedging, `126 million hours Backtesting`, `Research Paper documentation` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/pasted-image%20(15).png?raw=true)|   Python  |
 
 
 ## MQL5 Folder
@@ -67,6 +67,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Risk%20Management%20Logic.ipynb)**|    Risk Management Formulas | Finished    |   mathematical formulas |   na  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    The three 30-min candle wickyoff pattern | Finished    |  entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target |   na  |
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Max%20Number%20of%20Losing%20Streak%20in%20Regards%20to%20Winrate.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
+
 
 
 
