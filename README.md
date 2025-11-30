@@ -4,16 +4,6 @@ I program and make automated trading indicators, strategies, and executions. A q
 <div align="center" style="display:flex; gap:0;">
   <img src="https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/diagram-export-11-30-2025-11_12_54-AM.png?raw=true" width="1000"/>
 </div>
-<div align="center">
-
-| **Language** |  **Icon**  | **Development Environment** |  **Icon**  | 
-|---------------|-----------------------------|--|--|
-| Pine Script   | <img src="https://miro.medium.com/v2/resize:fit:480/1*aMKv9UbI3fZiAVJxNTTwew.png" width="30"/> | Pine Editor (TradingView)   | <img src="https://d1muf25xaso8hp.cloudfront.net/https://meta-q.cdn.bubble.io/f1726787205095x463784933370638960/tradingview-logo.png?w=&h=&auto=compress&dpr=1&fit=max" width="30" alt="TradingView logo"/> |
-| Python        | <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" width="30"/> |  Jupyter Notebook            | <img src="https://cdn.icon-icons.com/icons2/2667/PNG/512/jupyter_app_icon_161280.png" width="30"/> |
-| MetaQuotes Language 5        | <img src="https://www.metaquotes.net/c/2/0/mql5_logo__2.jpg" width="30"/> |  Meta Trader 5            | <img src="https://strapi-content-staging.s3.ap-southeast-2.amazonaws.com/medium_metatrader_icon_55a5568545.png" width="30"/> |
-
-</div>
-
 ---
 
 | Feature/Aspect                | Pine Script                                                                                       | Python                                                                                                      | MQL5                                                                                                                                           |
@@ -77,6 +67,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Risk%20Management%20Logic.ipynb)**|    Risk Management Formulas | Finished    |   mathematical formulas |   na  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    The three 30-min candle wickyoff pattern | Finished    |  entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target |   na  |
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Max%20Number%20of%20Losing%20Streak%20in%20Regards%20to%20Winrate.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
+
 
 
 
