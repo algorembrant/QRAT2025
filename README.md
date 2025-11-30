@@ -61,16 +61,8 @@
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
 
 
----
 
-# My Repository
 
-Some intro text...
-
-<!-- REPO_STATS_START -->
-<!-- REPO_STATS_END -->
-
-More content...
 
 
 
