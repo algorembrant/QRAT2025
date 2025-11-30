@@ -50,16 +50,17 @@
 
 |   View    |   Info    |   Status  |   Included Details    |   Language    |
 |-|-|-|-|-|
-| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Hedging Expert Advisor (EA) for MT5 | Finished    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, `4hour trial, six 1h, 12h finale (22hr+ duration tests)` `documented & research paper` `2 LiveTests 7hr &` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/pasted-image%20(12).png)|   MQL5  |
+| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/tree/main/MQL5%20Folder/%231EATB-Expert%20Advisor%20Trading%20Bot%20for%20MT5)**|    Hedging Expert Advisor (EA) for MT5 | Finished    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, `4hour trial, six 1h, 12h finale (22hr+ duration tests)` `documented & research paper` `2 LiveTests 7hr &` ![img](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/pasted-image%20(12).png)|   MQL5  |
 
 ## Concepts and Topics Folder
 
 |   View    |   Info    |   Status  |   Included Details    |   Language    |
 |-|-|-|-|-|
-| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    The Law of Large Numbers | Finished    |   Showcases the theory using simulated outcome, 6 side die and 2 side coin examples |   Python  |
-| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Risk Management Formulas | Finished    |   mathematical formulas |   na  |
+| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/The%20Law%20of%20Large%20Numbers%20(LLN).ipynb)**|    The Law of Large Numbers | Finished    |   Showcases the theory using simulated outcome, 6 side die and 2 side coin examples |   Python  |
+| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Risk%20Management%20Logic.ipynb)**|    Risk Management Formulas | Finished    |   mathematical formulas |   na  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    The three 30-min candle wickyoff pattern | Finished    |  entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target |   na  |
-| **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
+| **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Max%20Number%20of%20Losing%20Streak%20in%20Regards%20to%20Winrate.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
+
 
 
 
