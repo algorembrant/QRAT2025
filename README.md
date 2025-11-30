@@ -23,7 +23,6 @@
     Python Folder    
     MQL5 Folder     
     Concepts and Topics Folder
-    Images Folder
 
 ## Pinescript Folder
 
@@ -72,6 +71,7 @@ Some intro text...
 <!-- REPO_STATS_END -->
 
 More content...
+
 
 
 
