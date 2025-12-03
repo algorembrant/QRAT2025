@@ -6,6 +6,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 </div>
 
 
+<small>
 
 ## QAT-QuantitativeAlgorithmicTrading
 
@@ -13,6 +14,10 @@ I program and make automated trading indicators, strategies, and executions. A q
     Python Folder    
     MQL5 Folder     
     Concepts and Topics Folder
+
+</small>
+
+<small>
 
 ## Folders
 |  Name & Title  |  Included Details & Informations  |  Status  | Language  |  Research Paper  |  Notebook 
@@ -38,3 +43,5 @@ I program and make automated trading indicators, strategies, and executions. A q
 |Risk Management Formulas   |   mathematical formulas for trading   |   Finished    |   na  |   na  | view    |   | 
 |The three 30-min candle wickyoff pattern   | entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target  |   Finished    |   na  |na  | view    |   |    
 |Max Number of Losing Streak in Regards to Winrate  |   Showcases the theory using simulated outcome, monte carlo simulation, probability distribution |  Finished    |   Python  |   na  | view    |   |    
+
+</small>
