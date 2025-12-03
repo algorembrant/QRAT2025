@@ -18,5 +18,7 @@
 |**MQL5 Folder**|
 |Hedging Expert Advisor (EA) for MT5    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, 4hour trial, six 1h, 12h finale (22hr+ duration tests) documented & 2 LiveTests 7hr &    |   Finished    |   MQL5  |   yes  |   view    |   | 
 |**Concepts and Topics Folder**|
-|The Law of Large Numbers   |   Showcases the theory using simulated outcome, 6 side die and 2 side coin examples   |   Finished    |   na  |   na  | view    |   |    
-|Risk Management Formulas   |   mathematical formulas for trading   |   Finished    |   Python  |   na  | view    |   | 
+|The Law of Large Numbers   |   Showcases the theory using simulated outcome, 6 side die and 2 side coin examples   |   Finished    |   Python  |   na  | view    |   |    
+|Risk Management Formulas   |   mathematical formulas for trading   |   Finished    |   na  |   na  | view    |   | 
+|The three 30-min candle wickyoff pattern   | entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target  |   Finished    |   na  |na  | view    |   |    
+|Max Number of Losing Streak in Regards to Winrate  |   Showcases the theory using simulated outcome, monte carlo simulation, probability distribution |  Finished    |   Python  |   na  | view    |   |    
