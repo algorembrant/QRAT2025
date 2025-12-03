@@ -24,7 +24,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 |----------------|-----------------------------------|----------|---------------------------------|-----------------|------------------|
 |**Pinescript Folder**|
 |Sunstoic's charting tool 2025 | indicators, TPO profile, Volume profile    |   Finished    |   Pinescript  |   na  |   view    |   |  
-|89RS The 8-9pm Rangebreakout Stoporder Method.|    indicator and strategy, an Opening Range Break (ORB) reference. |   Finished    |   Pinescript  |   na  |   view    |
+|89RS The 8-9pm Rangebreakout Stoporder Method.|    indicator and strategy, an Opening Range Break (ORB) reference, `1 year backtested strategy` |   Finished    |   Pinescript  |   na  |   view    |
 |Asia/manila Time Logic |   code layout |   Finished    |   Pinescript  |   na  |   view    |   
 |1min 4CCP & 3min 6CBP Pattern Detector, 30minute bars (Asia/Manila) |  indicator, plot boxes via candle patterns   |   Finished    |   Pinescript  |   na  |   view    |
 |Risk Manager and Position Sizing   |  indicator, dynamic risk reward ratio plotter with position sizing    |   Finished    |   Pinescript  |   na  |   view    |
@@ -33,8 +33,8 @@ I program and make automated trading indicators, strategies, and executions. A q
 |Account Portfolio Equity Curve |   fetching of the Broker though MT5 communication |   Finished    |   Python  |   na  |   view    |   |
 |Market Profile (volume-based data version), not TPO-based  | chartploting with volume profile  |   Finished    |   Python  |   na  |   view    |   |  
 |Chart plotting |  ways to plot charts using different librraries  |   Finished    |   Python  |   na  |   view    |   |  
-|89RS Backtested in Python  |   the pinescript code of 89RS was translated into python |   Finished    |   Python  |   na  |   view    |   |
-|Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy |   Deployed Python algorithmic trading bot, stoporder hedging, `126 million hours Backtesting`|   Finished    |   Python  |   yes  |   view    |   | 
+|89RS Backtested in Python  |   the pinescript code of 89RS was translated into python, `6000 hours backtested` |   Finished    |   Python  |   na  |   view    |   |
+|Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy |   Deployed Python algorithmic trading bot, stoporder hedging, `126 million hours Backtested`|   Finished    |   Python  |   yes  |   view    |   | 
 | Design and Optimization of 3mTSHSUHCv1: Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles | Deployed Python algorithmic trading bot, stoporder hedging, `21 hours intraday test`   |   Finished    |   Python  |   yes  |   view    |   | 
 |**MQL5 Folder**|
 |Hedging Expert Advisor (EA) for MT5    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, `4hour trial, six 1h, 12h finale (22hr+ duration tests) & 2 LiveTests 7hr`    |   Finished    |   MQL5  |   yes  |   view    |   | 
