@@ -17,4 +17,6 @@
 | Design and Optimization of 3mTSHSUHCv1: Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles | Deployed Python algorithmic trading bot, stoporder hedging, 21hours intraday test   |   Finished    |   Python  |   yes  |   view    |   | 
 |**MQL5 Folder**|
 |Hedging Expert Advisor (EA) for MT5    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, 4hour trial, six 1h, 12h finale (22hr+ duration tests) documented & 2 LiveTests 7hr &    |   Finished    |   MQL5  |   yes  |   view    |   | 
-
+|**Concepts and Topics Folder**|
+|The Law of Large Numbers   |   Showcases the theory using simulated outcome, 6 side die and 2 side coin examples   |   Finished    |   na  |   na  | view    |   |    
+|Risk Management Formulas   |   mathematical formulas for trading   |   Finished    |   Python  |   na  | view    |   | 
