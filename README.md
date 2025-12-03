@@ -23,11 +23,11 @@ I program and make automated trading indicators, strategies, and executions. A q
 |  Name & Title  |  Included Details & Informations  |  Status  | Language  |  Research Paper  |  Notebook 
 |----------------|-----------------------------------|----------|---------------------------------|-----------------|------------------|
 |**Pinescript Folder**|
-|Sunstoic's charting tool 2025 | indicators, TPO profile, Volume profile    |   Finished    |   Pinescript  |   na  |   view    |   |  
-|89RS The 8-9pm Rangebreakout Stoporder Method.|    indicator and strategy, an Opening Range Break (ORB) reference, `1 year backtested strategy` |   Finished    |   Pinescript  |   na  |   view    |
-|Asia/manila Time Logic |   code layout |   Finished    |   Pinescript  |   na  |   view    |   
-|1min 4CCP & 3min 6CBP Pattern Detector, 30minute bars (Asia/Manila) |  indicator, plot boxes via candle patterns   |   Finished    |   Pinescript  |   na  |   view    |
-|Risk Manager and Position Sizing   |  indicator, dynamic risk reward ratio plotter with position sizing    |   Finished    |   Pinescript  |   na  |   view    |
+|[1] Sunstoic's charting tool 2025 | indicators, TPO profile, Volume profile    |   Finished    |   Pinescript  |   na  |   view    |   |  
+|[2] 89RS The 8-9pm Rangebreakout Stoporder Method.|    indicator and strategy, an Opening Range Break (ORB) reference, `1 year backtested strategy` |   Finished    |   Pinescript  |   na  |   view    |
+|[3] Asia/manila Time Logic |   code layout |   Finished    |   Pinescript  |   na  |   view    |   
+|[4] 1min 4CCP & 3min 6CBP Pattern Detector, 30minute bars (Asia/Manila) |  indicator, plot boxes via candle patterns   |   Finished    |   Pinescript  |   na  |   view    |
+|[5] Risk Manager and Position Sizing   |  indicator, dynamic risk reward ratio plotter with position sizing    |   Finished    |   Pinescript  |   na  |   view    |
 |**Python Folder**|
 |Broker Account Portfolio Identification    |   fetching data from mt5, chart plotting  |   Finished    |   Python  |   na  |   view    |   |
 |Account Portfolio Equity Curve |   fetching of the Broker though MT5 communication |   Finished    |   Python  |   na  |   view    |   |
