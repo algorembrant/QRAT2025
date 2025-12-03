@@ -14,6 +14,7 @@
 |Chart plotting |  ways to plot charts using different librraries  |   Finished    |   Python  |   na  |   view    |   |  
 |89RS Backtested in Python  |   the pinescript code of 89RS was translated into python |   Finished    |   Python  |   na  |   view    |   |
 |Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy |   Deployed Python algorithmic trading bot, stoporder hedging, 126 million hours Backtesting|   Finished    |   Python  |   yes  |   view    |   | 
-| Design and Optimization of 3mTSHSUHCv1: Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles | Deployed Python algorithmic trading bot, stoporder hedging, intraday test   |   Finished    |   Python  |   yes  |   view    |   | 
+| Design and Optimization of 3mTSHSUHCv1: Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles | Deployed Python algorithmic trading bot, stoporder hedging, 21hours intraday test   |   Finished    |   Python  |   yes  |   view    |   | 
 |**MQL5 Folder**|
+|Hedging Expert Advisor (EA) for MT5    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, 4hour trial, six 1h, 12h finale (22hr+ duration tests) documented & 2 LiveTests 7hr &    |   Finished    |   MQL5  |   yes  |   view    |   | 
 
