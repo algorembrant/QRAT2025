@@ -36,6 +36,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 |[5] 89RS Backtested in Python  |   the pinescript code of 89RS was translated into python, `6000 hours backtested` |   Finished    |   Python  |   na  |   view    |   |
 |[6] Design and Optimization of 1HRMRSSv1: 1H Range Median Reversion Stoporder Strategy |   Deployed Python algorithmic trading bot, stoporder hedging, `126 million hours Backtested`|   Finished    |   Python  |   [yes](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/1HRMRSSv1/0.%20Design%20and%20Optimization%20of%201HRMRSSv1.pdf)  |   view    |   | 
 |[7] Design and Optimization of 3mTSHSUHCv1: Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles | Deployed Python algorithmic trading bot, stoporder hedging, `21 hours intraday test`   |   Finished    |   Python  |   [yes](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Python%20Folder/3mTSHSUHCv1/0.%20Design%20and%20Optimization%20of%203mTSHSUHCv1.pdf)  |   view    |   | 
+|[8] Stress Testing 3mTSHSUHCv1: Evaluating the Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles 
 |**MQL5 Folder**|
 |[1] Hedging Expert Advisor (EA) for MT5    |   Deployed EA algorithmic trading bot, stoporder hedging, stoploss trailing, `4hour trial, six 1h, 12h finale (22hr+ duration tests) & 2 LiveTests 7hr`    |   Finished    |   MQL5  |   yes  |   view    |   | 
 |**Concepts and Topics Folder**|
