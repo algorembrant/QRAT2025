@@ -5,7 +5,7 @@ logic, and signal construction shown in the reference image. It covers
 Volume Conditions, VTR logic, Directional Movement (DM), DI, DX, and
 DMag (ADX), including how everything connects into a complete trading
 signal framework.
-
+ 
 ------------------------------------------------------------------------
 
 ## 1. Notation & Preliminaries
