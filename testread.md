@@ -2,7 +2,7 @@
 I program and make automated trading indicators, strategies, and executions. A quantitative algorithmic trader. I also make *ready-to-paste* scripts for you to copy or fork and have the bot *(not simulation)* for yourself. Enjoy!
 
 <div align="center" style="display:flex; gap:0;">
-  <img src="https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/diagram-export-11-30-2025-11_12_54-AM.png?raw=true" width="1000"/>
+  <img src="https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/diagram-export-11-30-2025-11_12_54-AM.png?raw=true" width="1000"/> 
 </div>
 ---
 
@@ -67,6 +67,7 @@ I program and make automated trading indicators, strategies, and executions. A q
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Risk%20Management%20Logic.ipynb)**|    Risk Management Formulas | Finished    |   mathematical formulas |   na  |
 | **[*link*](https://github.com/algorembrant/Pinescript.TradingView-Indicators.and.Strategies/blob/main/Trading%20Indicators%2C%20Strategies%20%26%20Techniques/SCT%20Sunstoic's%20Charting%20Tool.ipynb)**|    The three 30-min candle wickyoff pattern | Finished    |  entry model to have tighter stoploss to increase the R-multiple wihtout moving the TP target |   na  |
 | **[*link*](https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/Concepts%20and%20Topics%20Folder/Max%20Number%20of%20Losing%20Streak%20in%20Regards%20to%20Winrate.ipynb)**|    Max Number of Losing Streak in Regards to Winrate | Finished    |   Showcases the theory using simulated outcome, monte carlo simulation |   Python  |
+
 
 
 
