@@ -7,7 +7,7 @@ I program and make automated trading indicators, strategies, and executions. A q
  
 
 <small>
-
+ 
 ## QAT-QuantitativeAlgorithmicTrading
 
     Pinescript Folder
