@@ -5,7 +5,7 @@ I program and make automated trading indicators, strategies, and executions. A q
   <img src="https://github.com/algorembrant/QAT-QuantitativeAlgorithmicTrading/blob/main/z.Images%20Folder/diagram-export-11-30-2025-11_12_54-AM.png?raw=true" width="1000"/>
 </div>
  
-
+ 
 <small>
  
 ## QAT-QuantitativeAlgorithmicTrading
