@@ -16,9 +16,11 @@ string   TradeSymbol;
 datetime lastEntryBarTime   = 0; // track last original entry bar
 datetime lastTrailBarTime   = 0; // track last trailing bar
 bool     originalEntryDone  = false; // flag for original entry per day
+bool     originalEntryLoss  = false; // true if original entry closed at loss
 bool     reverseEntryDone   = false; // flag for reverse entry per day
 long     originalEntryType  = -1;    // POSITION_TYPE_BUY or POSITION_TYPE_SELL
 double   initialSL          = 0.0;   // store initial SL
+ulong    originalTicket     = 0;     // ticket of original entry
 
 // =====================
 // INIT
@@ -46,6 +48,7 @@ void OnTimer()
     HandleEntry();
     HandleReverseEntry();
     HandleTrailing();
+    CheckOriginalTradeProfit();
 }
 
 // ============================================================
@@ -88,6 +91,7 @@ void HandleEntry()
                 initialSL = sl;
                 originalEntryDone = true;
                 originalEntryType = POSITION_TYPE_BUY;
+                originalTicket = trade.ResultOrder(); // store ticket
             }
         }
     }
@@ -105,59 +109,67 @@ void HandleEntry()
                 initialSL = sl;
                 originalEntryDone = true;
                 originalEntryType = POSITION_TYPE_SELL;
+                originalTicket = trade.ResultOrder(); // store ticket
             }
         }
     }
 }
 
 // ============================================================
-// REVERSE ENTRY LOGIC (ONLY IF ORIGINAL CLOSED IN LOSS)
+// CHECK IF ORIGINAL TRADE CLOSED IN LOSS OR PROFIT
+// ============================================================
+void CheckOriginalTradeProfit()
+{
+    if(!originalEntryDone || originalTicket == 0)
+        return;
+
+    // Check if original trade exists
+    if(!PositionSelect(TradeSymbol))
+        return;
+
+    long type = PositionGetInteger(POSITION_TYPE);
+    double openPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+    double closePrice = PositionGetDouble(POSITION_PRICE_CURRENT);
+
+    double profit = 0.0;
+    if(type == POSITION_TYPE_BUY)
+        profit = closePrice - openPrice;
+    else if(type == POSITION_TYPE_SELL)
+        profit = openPrice - closePrice;
+
+    if(profit > 0)
+        originalEntryLoss = false; // profitable → reverse-entry disabled
+    else
+        originalEntryLoss = true;  // loss → reverse-entry possible
+}
+
+// ============================================================
+// REVERSE ENTRY LOGIC (TRIGGERED ON LOSS, SL BASED ON PREV CANDLE)
 // ============================================================
 void HandleReverseEntry()
 {
-    if(reverseEntryDone || !originalEntryDone)
+    if(reverseEntryDone || !originalEntryDone || !originalEntryLoss)
         return;
 
-    // No active position → check if original trade hit SL in negative profit
     if(!PositionSelect(TradeSymbol))
     {
-        double profit = 0.0;
-
-        // Check last closed position
-        HistorySelect(TimeCurrent()-86400, TimeCurrent());
-        int total = HistoryDealsTotal();
-        for(int i = total-1; i >= 0; i--)
-        {
-            ulong ticket = HistoryDealGetTicket(i);
-            if(HistoryDealGetString(ticket, DEAL_SYMBOL) == TradeSymbol)
-            {
-                long type = HistoryDealGetInteger(ticket, DEAL_TYPE);
-                if((type == DEAL_TYPE_BUY || type == DEAL_TYPE_SELL) && HistoryDealGetInteger(ticket, DEAL_POSITION_ID) > 0)
-                {
-                    profit = HistoryDealGetDouble(ticket, DEAL_PROFIT);
-                    break;
-                }
-            }
-        }
-
-        if(profit >= 0) return; // profitable original-entry → no reverse
-
         // Current H3 candle (position = 0)
+        double open0  = iOpen(TradeSymbol, PERIOD_H3, 0);
+        double close0 = iClose(TradeSymbol, PERIOD_H3, 0);
         double low0   = iLow(TradeSymbol, PERIOD_H3, 0);
         double high0  = iHigh(TradeSymbol, PERIOD_H3, 0);
-        double bid    = SymbolInfoDouble(TradeSymbol, SYMBOL_BID);
-        double ask    = SymbolInfoDouble(TradeSymbol, SYMBOL_ASK);
 
         // Previous candle (position = -1)
         double lowPrev  = iLow(TradeSymbol, PERIOD_H3, 1);
         double highPrev = iHigh(TradeSymbol, PERIOD_H3, 1);
 
-        // Original BUY → Reverse SELL
+        // Original trade was BUY → Reverse SELL
         if(originalEntryType == POSITION_TYPE_BUY)
         {
-            if(initialSL > 0 && bid <= initialSL)
+            double bid = SymbolInfoDouble(TradeSymbol, SYMBOL_BID);
+            if(initialSL > 0 && bid <= initialSL) // original BUY SL hit
             {
-                double sl = highPrev; // SL = high of previous candle
+                double sl = highPrev; // SL of reverse SELL = high of previous candle
                 double vol = CalculateRiskVolume(bid, sl);
                 if(vol > 0)
                 {
@@ -167,12 +179,13 @@ void HandleReverseEntry()
             }
         }
 
-        // Original SELL → Reverse BUY
+        // Original trade was SELL → Reverse BUY
         if(originalEntryType == POSITION_TYPE_SELL)
         {
-            if(initialSL > 0 && ask >= initialSL)
+            double ask = SymbolInfoDouble(TradeSymbol, SYMBOL_ASK);
+            if(initialSL > 0 && ask >= initialSL) // original SELL SL hit
             {
-                double sl = lowPrev; // SL = low of previous candle
+                double sl = lowPrev; // SL of reverse BUY = low of previous candle
                 double vol = CalculateRiskVolume(ask, sl);
                 if(vol > 0)
                 {
@@ -192,6 +205,7 @@ void HandleTrailing()
     if(!PositionSelect(TradeSymbol))
         return;
 
+    // Use last closed H3 candle only (index 1)
     datetime barTime = iTime(TradeSymbol, PERIOD_H3, 1);
     if(barTime == 0 || barTime == lastTrailBarTime)
         return;
@@ -206,11 +220,19 @@ void HandleTrailing()
     double low   = iLow(TradeSymbol, PERIOD_H3, 1);
     double high  = iHigh(TradeSymbol, PERIOD_H3, 1);
 
-    if(type == POSITION_TYPE_BUY && close > open && low > currentSL)
-        trade.PositionModify(TradeSymbol, low, 0.0);
+    // ---------------- BUY ----------------
+    if(type == POSITION_TYPE_BUY)
+    {
+        if(close > open && low > currentSL)
+            trade.PositionModify(TradeSymbol, low, 0.0);
+    }
 
-    if(type == POSITION_TYPE_SELL && close < open && high < currentSL)
-        trade.PositionModify(TradeSymbol, high, 0.0);
+    // ---------------- SELL ----------------
+    if(type == POSITION_TYPE_SELL)
+    {
+        if(close < open && high < currentSL)
+            trade.PositionModify(TradeSymbol, high, 0.0);
+    }
 }
 
 // ============================================================
@@ -222,6 +244,7 @@ double CalculateRiskVolume(double entry, double stop)
     if(distance <= 0)
         return 0;
 
+    // spread x 10 rule
     int spread_points = (int)SymbolInfoInteger(TradeSymbol, SYMBOL_SPREAD);
     double spread     = spread_points * SymbolInfoDouble(TradeSymbol, SYMBOL_POINT);
     if(distance < spread * 10)
@@ -260,12 +283,15 @@ void ResetFlags()
     MqlDateTime t;
     TimeToStruct(now, t);
 
+    // Reset once per day at 0:00 H3 candle
     if(t.hour == 0 && lastResetTime < now - 3600)
     {
         originalEntryDone = false;
+        originalEntryLoss = false;
         reverseEntryDone  = false;
         initialSL         = 0.0;
         originalEntryType = -1;
+        originalTicket    = 0;
         lastResetTime = now;
     }
 }
