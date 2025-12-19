@@ -233,3 +233,5 @@ double CalcRiskVol(string s,double entry,double sl)
 
    return vol;
 }
+
+{gg as}
