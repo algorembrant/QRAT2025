@@ -1,0 +1,235 @@
+#property strict
+#include <Trade/Trade.mqh>
+
+CTrade trade;
+
+// =====================
+// INPUTS
+// =====================
+input double RiskPercent = 1.0;
+input int    TimerSec    = 5;
+
+// =====================
+// SYMBOLS
+// =====================
+string TradeSymbols[] =
+{
+   "NZDUSDc",
+   "USDJPYc",
+   "XAGUSDc",
+   "XAUUSDc"
+};
+#define SYM_COUNT 4
+
+// =====================
+// PER-SYMBOL STATE
+// =====================
+datetime lastEntryBar[SYM_COUNT];
+datetime lastTrailBar[SYM_COUNT];
+
+double   lastBuySL[SYM_COUNT];
+double   lastSellSL[SYM_COUNT];
+
+bool     buyStoppedLoss[SYM_COUNT];
+bool     sellStoppedLoss[SYM_COUNT];
+
+// =====================
+// INIT
+// =====================
+int OnInit()
+{
+   for(int i=0;i<SYM_COUNT;i++)
+   {
+      SymbolSelect(TradeSymbols[i],true);
+      lastEntryBar[i]=0;
+      lastTrailBar[i]=0;
+      lastBuySL[i]=0;
+      lastSellSL[i]=0;
+      buyStoppedLoss[i]=false;
+      sellStoppedLoss[i]=false;
+   }
+   EventSetTimer(TimerSec);
+   return INIT_SUCCEEDED;
+}
+
+void OnDeinit(const int reason)
+{
+   EventKillTimer();
+}
+
+void OnTimer()
+{
+   for(int i=0;i<SYM_COUNT;i++)
+   {
+      HandleEntry(i);
+      HandleReversal(i);
+      HandleTrailing(i);
+   }
+}
+
+// ============================================================
+// ORIGINAL ENTRY (ONLY 0:00–3:00 H3 BAR)
+// ============================================================
+void HandleEntry(int i)
+{
+   string s = TradeSymbols[i];
+
+   if(PositionSelect(s))
+      return;
+
+   datetime barTime = iTime(s,PERIOD_H3,1);
+   if(barTime==0 || barTime==lastEntryBar[i])
+      return;
+
+   lastEntryBar[i]=barTime;
+
+   MqlDateTime t;
+   TimeToStruct(barTime,t);
+   if(t.hour!=0) return;
+
+   double o=iOpen(s,PERIOD_H3,1);
+   double c=iClose(s,PERIOD_H3,1);
+   double l=iLow(s,PERIOD_H3,1);
+   double h=iHigh(s,PERIOD_H3,1);
+
+   trade.SetDeviationInPoints(20);
+   trade.SetTypeFillingBySymbol(s);
+
+   if(c>o)
+   {
+      double entry=SymbolInfoDouble(s,SYMBOL_ASK);
+      double sl=l;
+      double vol=CalcRiskVol(s,entry,sl);
+      if(vol>0 && trade.Buy(vol,s,entry,sl,0))
+      {
+         lastBuySL[i]=sl;
+         buyStoppedLoss[i]=false;
+      }
+   }
+   else if(c<o)
+   {
+      double entry=SymbolInfoDouble(s,SYMBOL_BID);
+      double sl=h;
+      double vol=CalcRiskVol(s,entry,sl);
+      if(vol>0 && trade.Sell(vol,s,entry,sl,0))
+      {
+         lastSellSL[i]=sl;
+         sellStoppedLoss[i]=false;
+      }
+   }
+}
+
+// ============================================================
+// REVERSAL ENTRY (ONLY NEGATIVE STOP OUT)
+// ============================================================
+void HandleReversal(int i)
+{
+   string s=TradeSymbols[i];
+
+   if(PositionSelect(s))
+      return;
+
+   double bid=SymbolInfoDouble(s,SYMBOL_BID);
+   double ask=SymbolInfoDouble(s,SYMBOL_ASK);
+
+   // BUY STOPPED → SELL
+   if(lastBuySL[i]>0 && !buyStoppedLoss[i])
+   {
+      if(bid<=lastBuySL[i])
+      {
+         buyStoppedLoss[i]=true;
+
+         double entry=bid;
+         double sl=iHigh(s,PERIOD_H3,1);
+         double vol=CalcRiskVol(s,entry,sl);
+         if(vol>0)
+            trade.Sell(vol,s,entry,sl,0);
+      }
+   }
+
+   // SELL STOPPED → BUY
+   if(lastSellSL[i]>0 && !sellStoppedLoss[i])
+   {
+      if(ask>=lastSellSL[i])
+      {
+         sellStoppedLoss[i]=true;
+
+         double entry=ask;
+         double sl=iLow(s,PERIOD_H3,1);
+         double vol=CalcRiskVol(s,entry,sl);
+         if(vol>0)
+            trade.Buy(vol,s,entry,sl,0);
+      }
+   }
+}
+
+// ============================================================
+// TRAILING (H3 CLOSE ONLY, SAME-COLOR ONLY, INFINITE)
+// ============================================================
+void HandleTrailing(int i)
+{
+   string s=TradeSymbols[i];
+
+   if(!PositionSelect(s))
+      return;
+
+   datetime barTime=iTime(s,PERIOD_H3,1);
+   if(barTime==0 || barTime==lastTrailBar[i])
+      return;
+
+   lastTrailBar[i]=barTime;
+
+   long type=PositionGetInteger(POSITION_TYPE);
+   double curSL=PositionGetDouble(POSITION_SL);
+
+   double o=iOpen(s,PERIOD_H3,1);
+   double c=iClose(s,PERIOD_H3,1);
+   double l=iLow(s,PERIOD_H3,1);
+   double h=iHigh(s,PERIOD_H3,1);
+
+   if(type==POSITION_TYPE_BUY)
+   {
+      if(c>o && l>curSL)
+         trade.PositionModify(s,l,0);
+   }
+   else if(type==POSITION_TYPE_SELL)
+   {
+      if(c<o && h<curSL)
+         trade.PositionModify(s,h,0);
+   }
+}
+
+// ============================================================
+// RISK & SPREAD ×10 FILTER
+// ============================================================
+double CalcRiskVol(string s,double entry,double sl)
+{
+   double dist=MathAbs(entry-sl);
+   if(dist<=0) return 0;
+
+   double spread=
+      SymbolInfoInteger(s,SYMBOL_SPREAD) *
+      SymbolInfoDouble(s,SYMBOL_POINT);
+
+   if(dist < spread*10) return 0;
+
+   double risk=AccountInfoDouble(ACCOUNT_BALANCE)*RiskPercent/100.0;
+
+   double tickSize=SymbolInfoDouble(s,SYMBOL_TRADE_TICK_SIZE);
+   double tickVal =SymbolInfoDouble(s,SYMBOL_TRADE_TICK_VALUE);
+
+   double cost=(dist/tickSize)*tickVal;
+   if(cost<=0) return 0;
+
+   double vol=risk/cost;
+
+   double minLot=SymbolInfoDouble(s,SYMBOL_VOLUME_MIN);
+   double maxLot=SymbolInfoDouble(s,SYMBOL_VOLUME_MAX);
+   double step  =SymbolInfoDouble(s,SYMBOL_VOLUME_STEP);
+
+   vol=MathFloor(vol/step)*step;
+   vol=MathMax(vol,minLot);
+   vol=MathMin(vol,maxLot);
+
+   return vol;
+}
