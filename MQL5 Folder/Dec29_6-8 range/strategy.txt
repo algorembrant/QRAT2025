@@ -1,1 +1,1 @@
-locate the highest the 6am to 8am range 
+locate the highest high and lowest low inside 6am to 8am range.
