@@ -1,1 +1,3 @@
 locate the highest high and lowest low inside 6am to 8am range.
+
+If the 3-minute bar close above
