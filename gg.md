@@ -1,3 +1,7 @@
+
+<img width="672" height="318" alt="image" src="https://github.com/user-attachments/assets/1495c901-ce99-457f-9000-4267646ba9be" />
+
+
 #### My motto in Life
 >"A **meta condition**. Do it solely expecting to lose, and consciously focus on doing your best while being unconscious of winning."
 
