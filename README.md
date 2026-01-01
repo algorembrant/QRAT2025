@@ -62,15 +62,104 @@ Manual Methodologies:        390 pages
 </div>
 
 
->*Algorithmic Trading Repositories isnt public*
+---
+<br><br><br>
 
+## Open Source Significant Projects
 
-
-
-
-
-
-
+```
+QRAT2025/
+│
+├── MQL5 Folder/
+│   ├── 1EATB - Expert Advisor Trading Bot for MT5/
+│   ├── 0:00-3:00 Range/
+│   ├── 89RS MT5 version/
+│   ├── ADX Filter/
+│   ├── Volume Profile-based breakout momentum strategy/
+│   ├── 6-8 range/
+│   ├── Developing POC/
+│   ├── H3 0 bar redbear bluebull (indicator)/
+│   └── Revised 0-3/
+│
+├── Pinescript Folder/
+│   ├── 0SCT2025/
+│   ├── 12pm Key Level/
+│   ├── 1D Candle Preview/
+│   ├── 3-Candle Pattern Highlighter (1-Minute Only)/
+│   ├── General engulfing/
+│   ├── 3-Minute Engulfing Pattern (3mEP) - 1m Visible/
+│   ├── 30m high & low/
+│   ├── 3am to close & 9am to 11am Candle/
+│   ├── 4CCP + 4CRP Patterns/
+│   ├── 4CCP + 6CBP Pattern Detector + 30minute bars (AsiaManila)/
+│   ├── 4CCP Pattern detector/
+│   ├── 4CEP + 10CRP Patterns/
+│   ├── 4CEP-T1 & T2 Patterns - Tiny Circle Labels on 3rd Candle/
+│   ├── 5 Candle Pattern Highlighter (1-Minute Only)/
+│   ├── 6CBP Pattern Detector (Bearish & Bullish)/
+│   ├── 89RS/
+│   ├── AMDX/
+│   ├── Buying at Mariana's Trench/
+│   ├── Daily Candle in Lower Timeframes/
+│   ├── Exact 30m Candles in any timeframe/
+│   ├── Highlight Key Hourly Candles/
+│   ├── Hourly Range Logic/
+│   ├── Manual Key level/
+│   ├── Market Profile (Volume based)/
+│   ├── OB-OS Multi-Indicator Dashboard/OB/
+│   ├── Relative Strength Index/
+│   ├── Risk Manager and Position Sizing/
+│   ├── Synthetic Gamma Exposure (GEX)/
+│   ├── Table Statistics/
+│   ├── Time Logic Reference/
+│   ├── VROC buy&sell/
+│   ├── VWAP with buy&sell spread/
+│   ├── Vertical Lines at a Specific Time/
+│   ├── Vision Market Profile v3 Simple/
+│   ├── v4 Variant 1/
+│   ├── v5 Cumulative Delta/
+│   ├── v5 Variant 1/
+│   ├── v5 Variant 2/
+│   └── v6 Sunstoic/
+│
+├── Python Folder/
+│   ├── 3 tick-volume pattern hedge/
+│   ├── All country's Total Debt/
+│   ├── Bubble Orders/
+│   ├── COT Report Interpreter/
+│   ├── Candlestick, Tick Volume, Range, Body, Wick/
+│   ├── Cummulative Volume/
+│   ├── Dec25.2025_Volume Profile based strategy visualization/
+│   ├── Dec31_Newsfetching/
+│   ├── Downslope Linear Regression/
+│   ├── EBP One Candle Strategy/
+│   ├── Equity Profile Clasification/
+│   ├── Fetching Data from mplfinance/
+│   ├── Fetching Portfolio/
+│   ├── Law of Large Numbers/
+│   ├── Market Profiles/
+│   ├── OHRMRSHS (from 89RS)/
+│   ├── Rem lookback Algorithm/
+│   ├── Remscount Algorithm/
+│   ├── The 0.25 precision footprint candles/
+│   ├── Ticker Quotes Fetching/
+│   ├── Time Alignment/
+│   ├── Using Python to plot charts from MT5's data feed, mplfinance, matplotlib, and plotly charts/
+│   ├── Variance and Standard Deviations/
+│   ├── Volatility-Based Trading Strategy, VTR, ADX, DI, DMag/
+│   ├── Volume Spread Analysis/
+│   └── Worldmap imprvedversionof1bardelaySwing/
+│
+└── Research Papers/
+    ├── The 1CPMOTS.rp1: Is Treating Trading Worse Than a Coin Flip, but with a Slight Edge, Profitable?/
+    ├── The 1HRMRSS.rp1: Design and Optimization of the One Hour Range Median Reversion Stoporder Strategy/
+    ├── The 1SSHSHFT.rp1: Is Simultaneous Stopout Hedging Strategy, a High Frequency Trading, an Edge in Retail Level Application?/
+    ├── The 3HTMOSDSDT.rp1: Three-hour Timeframe Market Order Strategy with Defined Stoploss and Dynamic Takeprofit/
+    ├── The 3HTMOSDSDT.rp2: Portfolio Diversification for 'Three-hour Timeframe Market Order Strategy with Defined Stoploss and Dynamic Takeprofit' Trading Model/
+    ├── The 3mTSHSUHC.rp1: Design and Optimization of Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
+    ├── The 3mTSHSUHC.rp2: Stress Test & Evaluating the Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
+    └── The 3mTSHSUHC.rp3: Metric Threshold and Minimum Bars Apart Analysis of Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
+```
 
 
 
