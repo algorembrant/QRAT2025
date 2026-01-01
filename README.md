@@ -160,8 +160,20 @@ QRAT2025/
     ├── The 3mTSHSUHC.rp2: Stress Test & Evaluating the Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
     └── The 3mTSHSUHC.rp3: Metric Threshold and Minimum Bars Apart Analysis of Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
 ```
+<br><br><br>
 
+## Citation
+Here's the citation if you find these helpful for you.     *(tho isn't)*
 
+```bibtex
+@misc{QRAT2025,
+  author = {Albeos, Rembrant},
+  title = {{QRAT2025}},
+  year = {2025},
+  url = {https://github.com/algorembrant/QRAT2025},
+  note = {GitHub repository}
+}
+```
 
 
 
