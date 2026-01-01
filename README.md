@@ -11,19 +11,19 @@
   </tr>
 </table>
 
-#### Whatever
+### Whatever
 
 I'm a person who values Psychology, but I put zer0% discretion when using automated Algorithmic Trading with philosophical trust. I hold no advantage over financial markets; I only risk what I can afford to lose. 
 
 I do not have all the knowledge. I'm willing to acknowledge, recognise my blind spot, and earnestly fill what I'm lacking.
 
-#### Manual & Semi-Algorithmic Trading
+### Manual & Semi-Algorithmic Trading
 ```
 Manual Methodologies:        390 pages 
 ```
 *It doesnt mean you can use it if it's free tho* [ <img src="https://th.bing.com/th/id/ODF.TE4DSYiS8WOuvDTN78Bcrg?w=32&h=32&qlt=99&pcl=fffffa&o=6&pid=1.2" alt="Reseatch Paper" height="20"/>](https://drive.google.com/file/d/1R6qltpwIyxUY29CXOipuGSHORDSebuOL/view?usp=drive_link)
 
-#### Algorithmic Trading Projects Count *(not number of files)*
+### Algorithmic Trading Projects Count *(not number of files)*
 ```
   Pinescript language:	      39
   MQL5 language:	           9
@@ -37,7 +37,7 @@ Manual Methodologies:        390 pages
     recent update:  Dec 31th, 2025
 </div>
   
-#### Programable Forte
+### Programable Forte
 
 <div align="center">
   <img src="https://cdn.freelogovectors.net/wp-content/uploads/2021/12/tradingviewlogo-freelogovectors.net_-400x71.png" height="22"/>
@@ -62,8 +62,8 @@ Manual Methodologies:        390 pages
 </div>
 
 
----
-<br><br><br>
+
+<br>
 
 ## Open Source Significant Projects
 
