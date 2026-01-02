@@ -89,10 +89,10 @@ Manual Methodologies:        390 pages
 
 **QRAT2025** is a comprehensive quantitative trading research and development repository that integrates:
 
-- **Execution systems** (MT5 Expert Advisors and indicators)
-- **Signal engineering and visualization** (TradingView Pine Script)
-- **Data science, analytics, and modeling** (Python)
-- **Formal research and strategy validation** (Research Papers)
+- **Execution systems** [*(MT5 Expert Advisors and indicators)*](https://github.com/algorembrant/QRAT2025/tree/main/MQL5%20Folder)
+- **Signal engineering and visualization** [*(TradingView Pine Script)*](https://github.com/algorembrant/QRAT2025/tree/main/Pinescript%20Folder)
+- **Data science, analytics, and modeling** [*(Python)*](https://github.com/algorembrant/QRAT2025/tree/main/Python%20Folder)
+- **Formal research and strategy validation** [*(Research Papers)*](https://github.com/algorembrant/QRAT2025/tree/main/Research%20Papers)
 
 The repository reflects a **full-stack trading workflow**:  
 **idea → hypothesis → indicator → strategy → automation → statistical validation → portfolio considerations**
