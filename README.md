@@ -9,17 +9,6 @@
     <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/d454b550-ca78-4cda-a8e8-261edfca8601" /></td>
     <td><img width="652" alt="550619554_1506792687170986_7254869329101140500_n" src="https://github.com/user-attachments/assets/1419e8ef-994b-4021-bae1-0a2655146f57" /></td>
     
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/86cd8a36-cc23-4857-af55-95795b6f3f65"
-         width="100%"
-         controls
-         autoplay
-         muted
-         loop>
-  </video>
-</p>
-
-
   </tr>
 </table>
 
@@ -76,6 +65,16 @@ Manual Methodologies:        390 pages
 
 
 <br>
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/86cd8a36-cc23-4857-af55-95795b6f3f65"
+         controls
+         muted
+         autoplay
+         loop
+         width="600">
+  </video>
+</p>
 
 ## Open Source Significant Projects
 
