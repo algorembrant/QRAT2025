@@ -64,17 +64,24 @@ Manual Methodologies:        390 pages
 
 <br>
 
-
-
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/86cd8a36-cc23-4857-af55-95795b6f3f65"
-         controls
-         muted
-         autoplay
-         loop
-         width="600">
-  </video>
-</p>
+<table align="center" style="border-collapse: collapse;">
+  <tr>
+    <td align="center" style="padding: 10px;">
+      <img 
+        src="https://github.com/user-attachments/assets/1b06c09c-7c36-4a1c-bb8d-6c9032b6ee92" 
+        width="500" 
+        alt="Image 1"
+      />
+    </td>
+    <td align="center" style="padding: 10px;">
+      <img 
+        src="https://github.com/user-attachments/assets/cd6e9810-d92c-47f8-9a57-9429c2a54baf" 
+        width="500" 
+        alt="Image 2"
+      />
+    </td>
+  </tr>
+</table>
 
 <br>
 
@@ -198,6 +205,12 @@ The QRAT2025 repository serves as a comprehensive collection of trading tools, s
 
 <br>
 
+## Highlighted profitable MWL5 Expert Advisor (EA)
+
+https://github.com/user-attachments/assets/57c04613-60a5-4038-a934-6031d3d20045
+
+<img width="1364" height="365" alt="image" src="https://github.com/user-attachments/assets/e65b3aba-3370-4fff-b2c2-ef9190b1bdf8" />
+
 ## Citation
 Here's the citation if you find these helpful for you.     *(tho isn't)*
 
@@ -210,6 +223,22 @@ Here's the citation if you find these helpful for you.     *(tho isn't)*
   note = {GitHub repository}
 }
 ```
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <video 
+        src="https://github.com/user-attachments/assets/86cd8a36-cc23-4857-af55-95795b6f3f65" 
+        controls 
+        width="360"
+        muted
+        loop
+    </td>
+  </tr>
+</table>
+
+
+
 
 
 
