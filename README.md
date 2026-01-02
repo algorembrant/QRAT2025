@@ -62,9 +62,9 @@ Manual Methodologies:        390 pages
   <img src="https://tradersunion.com/images/brokers/906.jpeg" alt="fundednext" height="20"/>
 </div>
 
-
-
 <br>
+
+
 
 <p align="center">
   <video src="https://github.com/user-attachments/assets/86cd8a36-cc23-4857-af55-95795b6f3f65"
@@ -76,9 +76,26 @@ Manual Methodologies:        390 pages
   </video>
 </p>
 
+<br>
+
+## Overview of this Reposotory
+
+**QRAT2025** is a comprehensive quantitative trading research and development repository that integrates:
+
+- **Execution systems** (MT5 Expert Advisors and indicators)
+- **Signal engineering and visualization** (TradingView Pine Script)
+- **Data science, analytics, and modeling** (Python)
+- **Formal research and strategy validation** (Research Papers)
+
+The repository reflects a **full-stack trading workflow**:  
+**idea → hypothesis → indicator → strategy → automation → statistical validation → portfolio considerations**
+
+<br>
+
 ## Open Source Significant Projects
 
 <img width="671" height="269" alt="image" src="https://github.com/user-attachments/assets/58e3043a-0cb3-44f2-9d73-898f6b683621" /><br><br>
+
 
 ```
 QRAT2025/
