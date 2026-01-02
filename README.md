@@ -85,7 +85,7 @@ Manual Methodologies:        390 pages
 
 <br>
 
-## Overview of this Reposotory
+## Overview of this Repository
 
 **QRAT2025** is a comprehensive quantitative trading research and development repository that integrates:
 
@@ -205,7 +205,7 @@ The QRAT2025 repository serves as a comprehensive collection of trading tools, s
 
 <br>
 
-## Highlighted profitable MWL5 Expert Advisor (EA)
+## Highlighted profitable MQL5 Expert Advisor (EA)
 
 https://github.com/user-attachments/assets/57c04613-60a5-4038-a934-6031d3d20045
 
