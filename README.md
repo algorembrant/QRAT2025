@@ -103,7 +103,7 @@ The repository reflects a **full-stack trading workflow**:
 
 <img width="671" height="269" alt="image" src="https://github.com/user-attachments/assets/58e3043a-0cb3-44f2-9d73-898f6b683621" /><br><br>
 
-
+## Files Architecture
 ```
 QRAT2025/
 │
