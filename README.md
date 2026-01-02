@@ -87,7 +87,11 @@ Manual Methodologies:        390 pages
 
 ## Overview of this Repository
 
-**QRAT2025** is a comprehensive quantitative trading research and development repository that integrates:
+**QRAT2025** is a comprehensive repository dedicated to quantitative trading research and development. It integrates a wide array of market analysis and trading strategies, spanning multiple dimensions including: **OCHL (Open, Close, High, Low) price-based, time-based, volume-based, news-based methodologies,** and more. The repository encompasses both foundational and advanced concepts, ranging from simple technical strategies to sophisticated frameworks such as **option flow, order flow, auction market theory, market profile, volume profile, orderbook**, and more.
+
+The repository supports both **manual and algorithmic trading**, with implementations primarily in **Pine Script**, **Python**, and **MQL5**, providing traders and researchers with the tools to design, test, and deploy strategies efficiently. QRAT2025 is structured to cater to diverse trading styles, including **intraday, swing, and long-term approaches**, and encourages the integration of multi-dimensional market insights for robust strategy development.
+
+**These are:**
 
 - **Execution systems** [*(MT5 Expert Advisors and indicators)*](https://github.com/algorembrant/QRAT2025/tree/main/MQL5%20Folder)
 - **Signal engineering and visualization** [*(TradingView Pine Script)*](https://github.com/algorembrant/QRAT2025/tree/main/Pinescript%20Folder)
