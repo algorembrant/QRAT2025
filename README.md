@@ -162,9 +162,13 @@ QRAT2025/
     ├── The 3mTSHSUHC.rp2: Stress Test & Evaluating the Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
     └── The 3mTSHSUHC.rp3: Metric Threshold and Minimum Bars Apart Analysis of Three-minute Timeframe Stoporder Hedging Strategy Using Heatmap Candles/
 ```
-<br><br>
+
+<br>
+
 ## What is it
 The QRAT2025 repository serves as a comprehensive collection of trading tools, strategies, indicators, scripts, and research I made for the past few months, focused on algorithmic trading, market analysis, and quantitative strategies across multiple platforms. It organizes content into four main folders—`MQL5`, `Pinescript`, `Python`, and `Research Papers`, each targeting different aspects of trading development. This structure suggests a trader or developer iteratively building, testing, and refining systems for platforms like `MetaTrader 5 (MQL5,C++)`, `TradingView (Pinescript, Javascript)`, and custom Python environments like for `Jupyter notebooks(Python)`. The naming conventions, such as time-specific ranges and pattern detectors, indicate a strong emphasis on intraday trading, volume analysis, candlestick patterns, and short-term momentum or reversion strategies.
+
+<br>
 
 ## Citation
 Here's the citation if you find these helpful for you.     *(tho isn't)*
