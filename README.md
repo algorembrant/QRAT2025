@@ -67,6 +67,8 @@ Manual Methodologies:        390 pages
 
 ## Open Source Significant Projects
 
+<img width="671" height="269" alt="image" src="https://github.com/user-attachments/assets/58e3043a-0cb3-44f2-9d73-898f6b683621" /><br><br>
+
 ```
 QRAT2025/
 │
