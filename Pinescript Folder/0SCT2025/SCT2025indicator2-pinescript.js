@@ -1,9 +1,7 @@
 //@version=5
 indicator("v6 Sunstoic VP&TPO", shorttitle = "v6 Sunstoic VP&TPO", overlay = true, max_lines_count = 500, max_boxes_count = 500, max_labels_count = 500, max_bars_back = 2000)
 
-
 ti                                     = input.string(defval = "Regular", title = "Calculation Type", options = ["Regular", "Fixed Range", "Fixed Interval"], group = "Calculation Type")
-
 
 auto                                   = input.string(defval = "Custom", options = ["Auto", "Custom"], title = "Auto Calculate Tick Levels? Custom?", inline = "1", group = "Current Session Configurations")
 tickzz                                 = input.float(defval = 2000 ,title = "Ticks", inline = "1", group = "Current Session Configurations")
@@ -17,7 +15,6 @@ showPre                                 = input.bool(defval = true, title = "Sho
 blackBox                                = input.bool(defval = false, title = "Segment Previous Sessions With Black Box?", group = "Previous Session Settings")
 rang                                    = input.bool(defval = true, title = "Show Previous Sessions Ranges?", group = "Previous Session Settings")
 
-
 distCalc                                = input.float(defval = 5.0, title = "% Distance to Hide Old SP Lines", tooltip = "If Price Exceeds The % Threshold Defined For This
                                              Setting (Price Distance From An Existing Sp Line - The Sp Line Will Dissapear Until Price Is Within Proximity Once More",
                                               group = "Previous Session Settings")
@@ -27,7 +24,6 @@ distCalc2                               = input.float(defval = 5.0, title = "% D
 distCalc3                               = input.float(defval = 5.0, title = "% Distance to Hide Old POC Lines", tooltip = "If Price Exceeds The % Threshold Defined For This
                                              Setting (Price Distance From An Existing Poc Line - The Poc Line Will Dissapear Until Price Is Within Proximity Once More",
                                               group = "Previous Session Settings")
-
 
 spShw                                  = input.bool(defval = true, title = "Show SP Lines and Labels", group = "Display Options", tooltip = "If Deselected, TPO Letters Will Only Turn Red When a SP Forms. No Other Identifying Features are Displayed")
 fr                                     = input.bool(defval = true, title = "Show Fixed Range Label and Line?" , group ="Display Options")
@@ -43,16 +39,13 @@ fnt                                    = input.string(defval = "Default", title 
 if timeframe.isdwm
     ti := "Fixed Range"
 
-
 if fr == true and barstate.islast
     line.new(math.round(st), close, math.round(st), close + 0.001, extend = extend.both, color = color.white, width = 4, xloc = xloc.bar_time)
     if ti != "Fixed Range"
         var box frStart = box.new(math.round(st), high + ta.tr, math.round(st), low - ta.tr,
      bgcolor = color.new(color.white, 100), border_color = na, text_size = size.normal, text_color = color.white, text_wrap = text.wrap_none,  text = "If Selected in Settings, \nFixed Range Begins Here", xloc = xloc.bar_time)
 
-
 fixTime = time(timeframe.period, timE)
-
 
 fonT = switch fnt
    
@@ -129,9 +122,7 @@ var string [] str = array.from(
      " y",
      " z"
 
-
      )
-
 
 if barstate.isfirst
 
@@ -349,7 +340,6 @@ atr                                      = ta.atr(14)
 var float tickz                          = 0.0
 ticks2 = array.new_float()
 
-
 if ti == "Regular" or ti == "Fixed Interval"
     if last_bar_index - bar_index == 1601
         if syminfo.mintick >= 0.01
@@ -369,7 +359,6 @@ else
                                                           atr * 30        
         else
             tickz := auto == "Custom" ? tickzz : atr * 100000        
-
 
 var line [] tpoLines                = array.new_line()
 ticks                               = array.new_float()
@@ -396,13 +385,11 @@ var int timRound = 0
 if session.isfirstbar_regular[4] and timRound == 0
     timRound := math.round(time - time[4])
 
-
 timeCond = switch ti
    
     "Regular"        => last_bar_index - bar_index <= 1600
     "Fixed Range"    => time >= st
     "Fixed Interval" => last_bar_index - bar_index <= 1600
-
 
 if timeCond
    
@@ -464,7 +451,6 @@ if timeCond
        
         label.set_x(op, first), label.set_y(op, open)
 
-
         firstBar := bar_index
         array.push(ticks, low)
         array.push(track, low)
@@ -484,7 +470,6 @@ if timeCond
 if timeCond and not finTim and ti == "Regular"
   or barstate.islast and ti == "Fixed Range"
   or timeCond and not finTim and ti == "Fixed Interval" and fixTime
-
 
     calc = max - min
     var label ibav = label.new(bar_index, close, color = na, style = label.style_label_left,  text_font_family = fonT)
@@ -525,7 +510,6 @@ if timeCond and not finTim and ti == "Regular"
     if array.size(finChe) > 0
         array.clear(finChe)
 
-
     if array.size(track) > 0
         array.push(ticks, array.get(track, array.size(track) - 1))
         for i = 1 to 500
@@ -541,21 +525,16 @@ if timeCond and not finTim and ti == "Regular"
                 break
         for i = array.size(ticks2) - 1 to 0
 
-
             array.push(tpoLines, line.new( first, array.get(ticks2, i),
-
 
                                                  last_bar_time,  
                                                  array.get(ticks2, i),
                                                  color = tickLevels == true ? color.new(color.lime, 75) : na,
                                                  xloc = xloc.bar_time
 
-
                                                  ))
 
-
             array.push(tpoLabels, label.new( first, array.get(ticks2, i),
-
 
                                                  color = color.new(color.white, 100),
                                                  textcolor = col,
@@ -567,18 +546,14 @@ if timeCond and not finTim and ti == "Regular"
         for i = 0 to array.size(ticks) - 1
             array.push(tpoLines, line.new( first, array.get(ticks, i),
 
-
                                                  last_bar_time,  
                                                  array.get(ticks, i),
                                                  color = tickLevels == true ? color.new(color.lime, 75) : na,
                                                  xloc = xloc.bar_time
 
-
                                                  ))
 
-
             array.push(tpoLabels, label.new( first, array.get(ticks, i),
-
 
                                                  color = color.new(color.white, 100),
                                                  textcolor = col,
@@ -587,7 +562,6 @@ if timeCond and not finTim and ti == "Regular"
                                                  xloc = xloc.bar_time,
                                                  text_font_family = fonT
                                                  ))
-
 
     if array.size(tpoLines) > 1 and bar_index - firstBar < array.size(str)
        
@@ -773,10 +747,8 @@ var line  [] jCopy         = array.new_line()
 var line  [] ibBarCopy     = array.new_line()
 var box   [] bBox          = array.new_box()
 
-
 tCnd = hour == str.tonumber(str.substring(timE, str.pos(timE, "-") + 1, str.length(timE) - 2))
      and minute == str.tonumber(str.substring(timE, str.pos(timE, "-") + 3))
-
 
 if session.islastbar and barstate.isconfirmed
    and timeCond and ti == "Regular" and array.size(tpoLabels) > 0
@@ -788,13 +760,11 @@ if session.islastbar and barstate.isconfirmed
         array.push(bBox, box.new(first, max, time, min, xloc = xloc.bar_time, bgcolor = #000000, border_color = na))
     if rang == true
 
-
         array.push(jCopy, line.copy(j))
         array.push(ibBarCopy, line.copy(ibBar))
     if array.size(val) > 0 and distCalc2 != 0
         for i = 0 to array.size(val) - 1
             array.push(valCopy, line.copy(array.get(val, i)))
-
 
     if array.size(tpoLabels) > 0
         for i = 0 to array.size(tpoLabels) - 1
@@ -806,7 +776,6 @@ if session.islastbar and barstate.isconfirmed
         for i = 0 to array.size(SP) - 1
             array.push(SPCopy, line.new(first, label.get_y(array.get(SP, i)), time, label.get_y(array.get(SP, i)), xloc = xloc.bar_time, color = color.new(col1, 80)))
    
-
 
 if array.size(SPCopy) > 0
     for i = 0 to array.size(SPCopy) - 1
@@ -827,7 +796,6 @@ if array.size(valCopy) > 0
         else if math.abs((close / line.get_y1(array.get(valCopy, i)) - 1)* 100) >= distCalc2
             line.set_x2(array.get(valCopy, i), line.get_x1(array.get(valCopy, i)))
 
-
 if array.size(pocCopy) > 0
     for i = 0 to array.size(pocCopy) - 1
         if line.get_y1(array.get(pocCopy, i)) <= high and line.get_y1(array.get(pocCopy, i)) >= low  
@@ -836,7 +804,6 @@ if array.size(pocCopy) > 0
             line.set_x2(array.get(pocCopy, i), time)
         else if math.abs((close / line.get_y1(array.get(pocCopy, i)) - 1)* 100) >= distCalc3
             line.set_x2(array.get(pocCopy, i), line.get_x1(array.get(pocCopy, i)))
-
 
 if array.size(tpoLabelsCopy) > 500
     for i = 0 to array.size(tpoLabelsCopy) - 500
@@ -847,22 +814,17 @@ if array.size(tpoLabelsCopy) > 500
     if array.size(bBox) > 1
         box.delete(array.shift(bBox))
 
-
 tf = input.timeframe("D", title = "Timeframe", inline = "0", group = "PROFILE SETTINGS")
-
 
 vap = input.float(70, title = "Value Area %", group = "PROFILE SETTINGS")/100
 lb_days = input.int(5, title = "# of Profiles", maxval = 20, minval = 1, tooltip = "Max: 20 \nLarge Display = Less Granular Profiles\nSmall Display = More Granular Profiles")
 mp = input.bool(false, title = "Calculate As Market Profile", group = "PROFILE SETTINGS", tooltip = "Calculations will distribue a 1 instead of the candle's volume.")
 
-
 disp_size = input.int(-10, minval = -500,maxval = 500,title  = "Display Size   ", inline = "3", group = "DISPLAY SETTINGS", tooltip = "The entire range of your profile will scale to fit inside this range.\n When Positive, the profile will display from the start of the day. \n When Negative, the profile will display from the end of the day.\nNotes:\n-This value is # bars away from your profile's Axis.\n-The farther from 0 this value is, the more granular your (horizontal) view will be. This does not change the Profiles' value; because of this, sometimes the POC looks tied with other values widely different. The POC CAN be tied to values close to it, but if the value is far away it is likely to just be a visual constraint. \n AUTO SCALE - Fits the profile within the lookback period.")
 auto_size = input.bool(true, title = "Auto-Scale", inline = "3", group = "DISPLAY SETTINGS")
 
-
 hi_width = input.int(10, maxval = 100, minval = 1,title = "[HVN] Analysis Width %      ↕", group = "High/Low Volume Nodes", tooltip = "[HVN] = High Volume Node\nAnalysis Width % = % of profile to take into account when determining what is a High Volume Node and what is Not.")*0.01
 lo_width = input.int(10, maxval = 100, minval = 1, title = "[LVN]  Analysis Width %      ↕", group = "High/Low Volume Nodes", tooltip = "[LVN] = Low Volume Node\nAnalysis Width % = % of profile to take into account when determining what is a Low Volume Node and what is Not.")*0.01
-
 
 poc_color = input.color(#d3be00, title = "POC Color", group = "Colors")
 var_color = input.color(#886000, title = "Value High/Low Color", group = "Colors")
@@ -871,19 +833,15 @@ ov_color = input.color(#886000, title = "Profile Color", group = "Colors")
 lv_color = input.color(#886000, title  = "Low Volume Color", group = "Colors")
 hv_color = input.color(#886000, title = "High Volume Color", group = "Colors")
 
-
 fix_z(_val) => _val>0?_val:1
-
 
 round_to(_round,_to) =>
     math.round(_round/_to)*_to
-
 
 vgroup_pull(_var,_array,_num1,_num2) =>
     _var == 1 and _num1>=_num2?array.get(_array,_num1-_num2):
       _var == 2 and array.size(_array)-1 >= (_num1 + _num2)?array.get(_array,_num1+_num2)
       :0
-
 
 prof_color(_num,_mv,_a1,_a2,_a3,_a4) =>
     _num==0?na:
@@ -895,10 +853,8 @@ prof_color(_num,_mv,_a1,_a2,_a3,_a4) =>
      (_num>_a3 or _num<_a4)?ov_color:
      vaz_color  
 
-
 var line_array = array.new_line(na)
 var box_array = array.new_box(na)
-
 
 kill_bar = ta.valuewhen(timeframe.change(tf),bar_index,lb_days+1)+1
 if array.size(line_array) > 0
@@ -922,7 +878,6 @@ if array.size(label.all) > 0
         if lx <= kill_bar
             label.delete(lb)
             array.remove(label.all,i)
-
 
 get_prof(_mp,_tf) =>
     new_calc = timeframe.change(_tf)
@@ -990,7 +945,6 @@ get_prof(_mp,_tf) =>
                 if _val >= math.avg(max,array.avg(ary))  
                     array.push(hvn_points,i)          
 
-
         if array.size(main) > 0    
             for i = 0 to array.size(main)-1
                 _val = array.get(main,i)
@@ -1019,7 +973,6 @@ get_prof(_mp,_tf) =>
                         lo_found := true
                     if lo_found
                         array.push(hvn_points,_val-e)
-
 
         if array.size(lvn_points)>0
             for i = 0 to array.size(lvn_points)-1
@@ -1053,3 +1006,4 @@ get_prof(_mp,_tf) =>
                     array.push(box_array,box.new(prof_axis,base+(i*tick_size[1]),(prof_axis+scaled),base+(i*tick_size[1]), border_color = prof_color(i,max_index,hvn_points,lvn_points,uc,dc), border_style = (i<dc or i>uc?line.style_dotted:line.style_solid), border_width = 1))
              
 get_prof(mp,tf)
+
