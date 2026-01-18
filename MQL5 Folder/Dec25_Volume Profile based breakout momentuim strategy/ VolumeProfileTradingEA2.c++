@@ -1,9 +1,3 @@
-//+------------------------------------------------------------------+
-//|                                       VolumeProfile_Breakout.mq5 |
-//|                                      Copyright 2024, Claude AI   |
-//|                                             https://www.mql5.com |
-//+------------------------------------------------------------------+
-#property copyright "Claude AI"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 #property strict
@@ -379,4 +373,5 @@ double GetLotSize(double sl_distance)
    if(lots > max_lot) lots = max_lot;
    
    return lots;
+
 }
